@@ -21,18 +21,15 @@ Imagine Pirate Ship wants to expand to the German market. In that case we'd need
 * Weights are entered in KG
 * Dimensions are entered in CM
 
-
 **Technical Details**
-
 * Your code should be committed to this git repository.
 * You may choose the technology stack freely, including programming language, frameworks (if any), libraries, etc.
-* The frontend must be HTML. It does not need to be pretty.
-* You can choose how to implement the requirements technically. The following extra points are for inspiration only, **but not compulsory**. **The main objective is to fulfil the Acceptance Criteria.**
-  * Provide ideas or features that improve UX ("What is the best option to ship my package? What is the cheapest option to ship my package? What is the easiest UX we can think of?") that go beyond the MVP acceptance criteria (either implemented or presented as ideas)
-  * Make it possible to perform all user actions via a (REST) API (no authentication needed)
-  * Make the frontend talk to the API, using AJAX requests, instead of full page refreshes.
-  * Create a testing strategy, including manual and/or automated tests.
-* It's fine if the requirements are not completed fully. However, we would like you to be able to talk about all of them.
+* The frontend must be HTML. It does not need to follow the most bleeding edge design trends, but should show your understanding of CSS.
+* You can choose how to implement the requirements technically. The following extra points are for inspiration only, **but not compulsory**. **The main objective is to fulfil the Acceptance Criteria.**  
+  * Provide ideas or features that improve UX ("What is the best option to ship my package? What is the cheapest option to ship my package? What is the easiest UX we can think of?") that go beyond the MVP acceptance criteria (either implemented or presented as ideas) 
+  * Create form validation that prevents the user from entering senseless inputs. 
+  * Create responsive design for mobile layouts, and accessible design for users that require it. 
+  * Create a testing strategy, including manual and/or automated tests.* It's fine if the requirements are not completed fully. However, we would like you to be able to talk about all of them.
 
 
 **References**
