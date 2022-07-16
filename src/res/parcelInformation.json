@@ -1,0 +1,75 @@
+[
+  {
+    "value": "paekchenS",
+    "name": "Päckchen S",
+    "restrictions": {
+      "height": 35,
+      "width": 25,
+      "length": 10,
+      "weight": 2,
+      "insured value": ""
+    },
+    "price": 3.99
+  },
+  {
+    "value": "paekchenM",
+    "name": "Päckchen M",
+    "restrictions": {
+      "height": 60,
+      "width": 30,
+      "length": 15,
+      "weight": 2,
+      "insured value": ""
+    },
+    "price": 4.79
+  },
+
+  {
+    "value": "packet2kg",
+    "name": "Packet 2kg",
+    "restrictions": {
+      "height": 60,
+      "width": 30,
+      "length": 15,
+      "weight": 2,
+      "insured value": ""
+    },
+    "price": 5.49
+  },
+  {
+    "value": "packet5kg",
+    "name": "Packet 5kg",
+    "restrictions": {
+      "height": 120,
+      "width": 60,
+      "length": 60,
+      "weight": 5,
+      "insured value": ""
+    },
+    "price": 6.99
+  },
+  {
+    "value": "packet10kg",
+    "name": "Packet 10kg",
+    "restrictions": {
+      "height": 120,
+      "width": 60,
+      "length": 60,
+      "weight": 10,
+      "insured value": ""
+    },
+    "price": 9.49
+  },
+  {
+    "value": "packet31kg",
+    "name": "Packet 31,5kg",
+    "restrictions": {
+      "height": 120,
+      "width": 60,
+      "length": 60,
+      "weight": 31,
+      "insured value": ""
+    },
+    "price": 16.99
+  }
+]
