@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { InputField } from "./InputField";
+import parcelInformation from "../res/parcelInformation.json";
+import { findOptimalParcel } from "../helperFunctions/findOptimalParcel";
 
 const Form = () => {
   const [userInput, setUserInput] = useState({
@@ -8,6 +10,10 @@ const Form = () => {
     height: 10,
     weight: 10,
   });
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    console.log(findOptimalParcel(userInput, parcelInformation));
+  };
 
   return (
     <>
