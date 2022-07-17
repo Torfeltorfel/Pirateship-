@@ -3,6 +3,7 @@ import { InputField } from "./InputField";
 import parcelInformation from "../res/parcelInformation.json";
 import { findOptimalParcel } from "../helperFunctions/findOptimalParcel";
 import { Button } from "./Button";
+import Title from "./Title";
 
 const Form = () => {
   const [optimalParcel, setOptimalParcel] = useState({});
@@ -19,6 +20,7 @@ const Form = () => {
 
   return (
     <>
+      <Title headingLevel="h1">get your parcel</Title>
       <form className="flex flex-col gap-3" onSubmit={handleSubmit}>
         <InputField
           placeholder="e.g. 17cm"
@@ -66,7 +68,7 @@ const Form = () => {
       </form>
       {optimalParcel && (
         <>
-          <h2>Your Parcel</h2>
+          <Title headingLevel={"h2"}>best choice</Title>
           <ul>
             <li>Name: {optimalParcel.name}</li>
             <li>Price: {optimalParcel.price}€</li>
