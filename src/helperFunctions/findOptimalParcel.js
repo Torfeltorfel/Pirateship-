@@ -1,17 +1,13 @@
-export const findOptimalParcel = (size, parcelInformation) => {
-  const userParcelWeight = size.weight;
-  const userParcelLength = size.length;
-  const userParcelWidth = size.width;
-  const userParcelHeight = size.height;
-  const result = parcelInformation.filter((parcel) => {
+export const findOptimalParcel = (userParcel, deliveryRestrictions) => {
+  const result = deliveryRestrictions.filter((parcel) => {
     const {
       restrictions: { weight, length, width, height },
     } = parcel;
     return (
-      userParcelLength <= length &&
-      userParcelWeight <= weight &&
-      userParcelWidth <= width &&
-      userParcelHeight <= height
+      userParcel.length <= length &&
+      userParcel.weight <= weight &&
+      userParcel.width <= width &&
+      userParcel.height <= height
     );
   });
   const lowestPrice = result.reduce(function (prev, curr) {
