@@ -22,6 +22,7 @@ const Form = () => {
           placeholder="Height"
           unit="cm"
           name="height"
+          maxValue={"120"}
           onChange={(event) =>
             setUserInput({ ...userInput, height: event.target.value })
           }
@@ -30,6 +31,7 @@ const Form = () => {
           placeholder="Width"
           unit="cm"
           name="width"
+          maxValue={"60"}
           onChange={(event) =>
             setUserInput({ ...userInput, width: event.target.value })
           }
@@ -38,6 +40,7 @@ const Form = () => {
           placeholder="Length"
           unit="cm"
           name="length"
+          maxValue={"60"}
           onChange={(event) =>
             setUserInput({ ...userInput, length: event.target.value })
           }
@@ -48,6 +51,7 @@ const Form = () => {
           unit="kg"
           name="kg"
           step="0.5"
+          maxValue={"31.5"}
           onChange={(event) =>
             setUserInput({ ...userInput, weight: event.target.value })
           }

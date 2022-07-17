@@ -1,12 +1,19 @@
 import React from "react";
 
-export const InputField = ({ placeholder, unit, onChange, minValue, step }) => {
+export const InputField = ({
+  placeholder,
+  unit,
+  onChange,
+  minValue,
+  maxValue,
+  step,
+}) => {
   return (
     <div className="flex flex-row justify-between relative">
       <input
         type="number"
         min={minValue}
-        max="100"
+        max={maxValue}
         placeholder={placeholder}
         required={true}
         className="border-2 p-1 flex grow"
