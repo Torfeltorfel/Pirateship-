@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { InputField } from "./InputField";
 import parcelInformation from "../res/parcelInformation.json";
 import { findOptimalParcel } from "../helperFunctions/findOptimalParcel";
+import { Button } from "./Button";
 
 const Form = () => {
   const [optimalParcel, setOptimalParcel] = useState({});
@@ -61,13 +62,7 @@ const Form = () => {
             setUserInput({ ...userInput, weight: event.target.value })
           }
         />
-        <button
-          aria-label="Submit button"
-          type="submit"
-          className="w-64 p-1 bg-slate-600 hover:bg-slate-500 focus:bg-slate-600 text-slate-100 focus:text-slate-50 uppercase font-bold"
-        >
-          Find best parcel price
-        </button>
+        <Button>get best parcel</Button>
       </form>
       {optimalParcel && (
         <>
