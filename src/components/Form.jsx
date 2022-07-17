@@ -47,6 +47,7 @@ const Form = () => {
           placeholder="kg"
           unit="kg"
           name="kg"
+          step="0.5"
           onChange={(event) =>
             setUserInput({ ...userInput, weight: event.target.value })
           }

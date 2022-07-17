@@ -1,6 +1,6 @@
 import React from "react";
 
-export const InputField = ({ placeholder, unit, onChange, minValue }) => {
+export const InputField = ({ placeholder, unit, onChange, minValue, step }) => {
   return (
     <div className="flex flex-row justify-between relative">
       <input
@@ -12,6 +12,7 @@ export const InputField = ({ placeholder, unit, onChange, minValue }) => {
         className="border-2 p-1 flex grow"
         controls={false}
         onChange={onChange}
+        step={step}
       />
       <span className="absolute inset-y-1 right-0 border-l-1 mr-2 text-slate-400">
         {unit}
