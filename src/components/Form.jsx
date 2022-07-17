@@ -4,6 +4,7 @@ import parcelInformation from "../res/parcelInformation.json";
 import { findOptimalParcel } from "../helperFunctions/findOptimalParcel";
 
 const Form = () => {
+  const [optimalParcel, setOptimalParcel] = useState({});
   const [userInput, setUserInput] = useState({
     width: 10,
     length: 10,
@@ -12,7 +13,7 @@ const Form = () => {
   });
   const handleSubmit = (event) => {
     event.preventDefault();
-    console.log(findOptimalParcel(userInput, parcelInformation));
+    setOptimalParcel(findOptimalParcel(userInput, parcelInformation));
   };
 
   return (
@@ -60,6 +61,13 @@ const Form = () => {
           Find best parcel price
         </button>
       </form>
+      {optimalParcel && (
+        <div>
+          <h2>Your parcel</h2>
+          <p>Name: {optimalParcel.name}</p>
+          <p>Price: {optimalParcel.price}€</p>
+        </div>
+      )}
     </>
   );
 };
