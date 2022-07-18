@@ -14,10 +14,10 @@ const ListItems = ({ optimalParcel, children }) => {
             <li className="font-semibold">Choice: {index + 1}</li>
             <li>Name: {parcel.name}</li>
             <li>Price: {parcel.price}€</li>
-            <li>Width: {parcel.restrictions.width}cm</li>
-            <li>Height: {parcel.restrictions.height}cm</li>
-            <li>Length: {parcel.restrictions.length}cm</li>
-            <li>Weight: {parcel.restrictions.weight}kg</li>
+            <li>Max Width: {parcel.restrictions.width}cm</li>
+            <li>Max Height: {parcel.restrictions.height}cm</li>
+            <li>Max Length: {parcel.restrictions.length}cm</li>
+            <li>Max Weight: {parcel.restrictions.weight}kg</li>
           </ol>
         ))}
       </div>
