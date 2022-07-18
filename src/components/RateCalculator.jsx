@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import { InputField } from "./InputField";
+import { InputField } from "./Atoms/InputField";
 import parcelInformation from "../res/parcelInformation.json";
 import { findOptimalParcel } from "../helperFunctions/findOptimalParcel";
-import { Button } from "./Button";
-import Title from "./Title";
+import { Button } from "./Atoms/Button";
+import Title from "./Atoms/Title";
 
 const RateCalculator = () => {
   const [optimalParcel, setOptimalParcel] = useState({});
