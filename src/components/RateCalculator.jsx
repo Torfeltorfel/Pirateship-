@@ -5,7 +5,7 @@ import { findOptimalParcel } from "../helperFunctions/findOptimalParcel";
 import { Button } from "./Button";
 import Title from "./Title";
 
-const Form = () => {
+const RateCalculator = () => {
   const [optimalParcel, setOptimalParcel] = useState({});
   const [userInput, setUserInput] = useState({
     width: 10,
@@ -79,4 +79,4 @@ const Form = () => {
   );
 };
 
-export default Form;
+export default RateCalculator;
