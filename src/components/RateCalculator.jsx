@@ -4,6 +4,7 @@ import parcelInformation from "../res/parcelInformation.json";
 import { findOptimalParcel } from "../helperFunctions/findOptimalParcel";
 import { Button } from "./Atoms/Button";
 import Title from "./Atoms/Title";
+import ListItems from "./Atoms/ListItems";
 
 const RateCalculator = () => {
   const [optimalParcel, setOptimalParcel] = useState({});
@@ -19,7 +20,7 @@ const RateCalculator = () => {
   };
 
   return (
-    <>
+    <div className="flex">
       <Title headingLevel="h1">get your parcel</Title>
       <form className="flex flex-col gap-3" onSubmit={handleSubmit}>
         <InputField
@@ -66,19 +67,10 @@ const RateCalculator = () => {
         />
         <Button>get best parcel</Button>
       </form>
-      {optimalParcel && (
-        <>
-          <Title headingLevel={"h2"}>best choice</Title>
-          {Object.keys(optimalParcel).length > 0 &&
-            optimalParcel.map((parcel) => (
-          <ul>
-                <li>Name: {parcel.name}</li>
-                <li>Price: {parcel.price}€</li>
-          </ul>
-            ))}
-        </>
+      {Object.keys(optimalParcel).length > 0 && (
+        <ListItems optimalParcel={optimalParcel} />
       )}
-    </>
+    </div>
   );
 };
 
