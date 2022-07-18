@@ -1,14 +1,14 @@
 import React, { FC } from "react";
 
 interface InputFieldProps {
-  placeholder: any;
-  unit: any;
-  onChange: any;
-  minValue?: any;
-  maxValue?: any;
-  step?: any;
-  id: any;
-  name: any;
+  placeholder: string;
+  unit: string;
+  onChange: (e: React.FormEvent<HTMLInputElement>) => void;
+  minValue?: number;
+  maxValue?: number;
+  step?: number;
+  id: string;
+  name: string;
 }
 
 export const InputField: FC<InputFieldProps> = ({
