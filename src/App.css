@@ -13,13 +13,14 @@ input[type="number"] {
 .button {
   width: 12rem;
   padding: 0.5rem;
-  background-color: rgb(71 85 105);
+  background-color: #748da6;
+  color: #fff;
   color: rgb(241 245 249 248);
   text-transform: uppercase;
   font-weight: 700;
 }
 .button:hover {
-  background-color: rgb(100 116 139 / var(--tw-bg-opacity));
+  background-color: #9cb4cc;
 }
 
 .rateCalculator {
@@ -31,7 +32,9 @@ input[type="number"] {
   display: flex;
   flex-direction: column;
   margin: auto;
+  margin-bottom: 4rem;
   max-width: 14rem;
   padding: 1rem;
-  background-color: rgb(227, 228, 250);
+  border: 1px solid #f2d7d9;
+  background-color: #fff;
 }

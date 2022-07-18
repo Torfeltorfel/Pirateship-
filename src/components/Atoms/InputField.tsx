@@ -24,7 +24,7 @@ export const InputField: FC<InputFieldProps> = ({
   return (
     <div className="">
       <label
-        className="text-xs text-slate-50 font-bold left-6 bottom-7"
+        className="text-xs text-slate-500 font-bold left-6 bottom-7"
         htmlFor={id}
       >
         {`${name}*`}
@@ -43,7 +43,7 @@ export const InputField: FC<InputFieldProps> = ({
           step={step}
         />
 
-        <span className="absolute inset-y-1 right-0 border-l-1 mr-2 text-slate-400">
+        <span className="absolute inset-y-1 right-0 border-l-1 mr-2 text-slate-700">
           {unit}
         </span>
       </div>
