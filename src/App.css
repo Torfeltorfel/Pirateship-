@@ -9,3 +9,15 @@ input::-webkit-inner-spin-button {
 input[type="number"] {
   -moz-appearance: textfield;
 }
+
+.button {
+  width: 12rem;
+  padding: 0.5rem;
+  background-color: rgb(71 85 105);
+  color: rgb(241 245 249 248);
+  text-transform: uppercase;
+  font-weight: 700;
+}
+.button:hover {
+  background-color: rgb(100 116 139 / var(--tw-bg-opacity));
+}
