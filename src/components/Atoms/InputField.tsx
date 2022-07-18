@@ -1,6 +1,17 @@
-import React from "react";
+import React, { FC } from "react";
 
-export const InputField = ({
+interface InputFieldProps {
+  placeholder: any;
+  unit: any;
+  onChange: any;
+  minValue?: any;
+  maxValue?: any;
+  step?: any;
+  id: any;
+  name: any;
+}
+
+export const InputField: FC<InputFieldProps> = ({
   placeholder,
   unit,
   onChange,
@@ -28,7 +39,6 @@ export const InputField = ({
           placeholder={placeholder}
           required={true}
           className="border-2 p-1 flex grow"
-          controls={false}
           onChange={onChange}
           step={step}
         />

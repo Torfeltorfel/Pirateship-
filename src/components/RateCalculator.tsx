@@ -2,9 +2,9 @@ import React, { useState } from "react";
 import { InputField } from "./Atoms/InputField";
 import parcelInformation from "../res/parcelInformation.json";
 import { findOptimalParcel } from "../helperFunctions/findOptimalParcel";
-import { Button } from "./Atoms/Button";
 import Title from "./Atoms/Title";
 import ListItems from "./Atoms/ListItems";
+import Button from "./Atoms/Button";
 
 const RateCalculator = () => {
   const [optimalParcel, setOptimalParcel] = useState({});
@@ -14,7 +14,7 @@ const RateCalculator = () => {
     height: 10,
     weight: 10,
   });
-  const handleSubmit = (event) => {
+  const handleSubmit = (event: any) => {
     event.preventDefault();
     setOptimalParcel(findOptimalParcel(userInput, parcelInformation));
   };
@@ -30,7 +30,7 @@ const RateCalculator = () => {
             id="height"
             name="Height"
             maxValue={"120"}
-            onChange={(event) =>
+            onChange={(event: any) =>
               setUserInput({ ...userInput, height: event.target.value })
             }
           />
@@ -40,7 +40,7 @@ const RateCalculator = () => {
             id="width"
             name="Width"
             maxValue={"60"}
-            onChange={(event) =>
+            onChange={(event: any) =>
               setUserInput({ ...userInput, width: event.target.value })
             }
           />
@@ -50,7 +50,7 @@ const RateCalculator = () => {
             id="length"
             name="Length"
             maxValue={"60"}
-            onChange={(event) =>
+            onChange={(event: any) =>
               setUserInput({ ...userInput, length: event.target.value })
             }
           />
@@ -62,7 +62,7 @@ const RateCalculator = () => {
             name="Weight"
             step="0.5"
             maxValue={"31.5"}
-            onChange={(event) =>
+            onChange={(event: any) =>
               setUserInput({ ...userInput, weight: event.target.value })
             }
           />

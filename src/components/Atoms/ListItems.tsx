@@ -1,15 +1,20 @@
-import React from "react";
+import React, { FC } from "react";
 import Title from "./Title";
 
-const ListItems = ({ optimalParcel, children }) => {
-  optimalParcel.sort((a, b) => {
+interface ListItemsProps {
+  optimalParcel: any;
+  children: React.ReactNode;
+}
+
+const ListItems: FC<ListItemsProps> = ({ optimalParcel, children }) => {
+  optimalParcel.sort((a: any, b: any) => {
     return a.price - b.price;
   });
   return (
     <div className="text-center">
       <Title headingLevel={"h2"}>{children}</Title>
       <div className="flex flex-wrap p-4 text-start">
-        {optimalParcel.map((parcel, index) => (
+        {optimalParcel.map((parcel: any, index: any) => (
           <ol key={parcel.name} className="p-4">
             <li className="font-semibold">Choice: {index + 1}</li>
             <li>Name: {parcel.name}</li>
