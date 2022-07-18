@@ -69,10 +69,13 @@ const RateCalculator = () => {
       {optimalParcel && (
         <>
           <Title headingLevel={"h2"}>best choice</Title>
+          {Object.keys(optimalParcel).length > 0 &&
+            optimalParcel.map((parcel) => (
           <ul>
-            <li>Name: {optimalParcel.name}</li>
-            <li>Price: {optimalParcel.price}€</li>
+                <li>Name: {parcel.name}</li>
+                <li>Price: {parcel.price}€</li>
           </ul>
+            ))}
         </>
       )}
     </>

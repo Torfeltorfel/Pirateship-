@@ -13,5 +13,5 @@ export const findOptimalParcel = (userParcel, deliveryRestrictions) => {
   const lowestPrice = result.reduce(function (prev, curr) {
     return prev.price < curr.price ? prev : curr;
   });
-  return lowestPrice;
+  return result;
 };
