@@ -2,6 +2,9 @@ import React from "react";
 import Title from "./Title";
 
 const ListItems = ({ optimalParcel }) => {
+  optimalParcel.sort((a, b) => {
+    return a.price - b.price;
+  });
   return (
     <div className="flex">
       <Title headingLevel={"h2"}>best choice</Title>
