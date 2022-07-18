@@ -14,7 +14,7 @@ const RateCalculator = () => {
     height: 10,
     weight: 10,
   });
-  const handleSubmit = (event: any) => {
+  const handleSubmit = (event: React.SyntheticEvent) => {
     event.preventDefault();
     setOptimalParcel(findOptimalParcel(userInput, parcelInformation));
   };
@@ -29,7 +29,7 @@ const RateCalculator = () => {
             unit="cm"
             id="height"
             name="Height"
-            maxValue={"120"}
+            maxValue={120}
             onChange={(event: any) =>
               setUserInput({ ...userInput, height: event.target.value })
             }
@@ -39,7 +39,7 @@ const RateCalculator = () => {
             unit="cm"
             id="width"
             name="Width"
-            maxValue={"60"}
+            maxValue={60}
             onChange={(event: any) =>
               setUserInput({ ...userInput, width: event.target.value })
             }
@@ -49,7 +49,7 @@ const RateCalculator = () => {
             unit="cm"
             id="length"
             name="Length"
-            maxValue={"60"}
+            maxValue={60}
             onChange={(event: any) =>
               setUserInput({ ...userInput, length: event.target.value })
             }
@@ -60,8 +60,8 @@ const RateCalculator = () => {
             unit="kg"
             id="weight"
             name="Weight"
-            step="0.5"
-            maxValue={"31.5"}
+            step={0.5}
+            maxValue={31.5}
             onChange={(event: any) =>
               setUserInput({ ...userInput, weight: event.target.value })
             }
