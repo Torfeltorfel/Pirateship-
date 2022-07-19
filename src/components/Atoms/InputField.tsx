@@ -3,7 +3,7 @@ import React, { FC } from "react";
 interface InputFieldProps {
   placeholder: string;
   unit: string;
-  onChange: (event: React.FormEvent<HTMLInputElement>) => void;
+  onChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
   minValue?: number;
   maxValue?: number;
   step?: number;
