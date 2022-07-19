@@ -5,9 +5,11 @@ import { findOptimalParcel } from "../helperFunctions/findOptimalParcel";
 import Title from "./Atoms/Title";
 import ListItems from "./Atoms/ListItems";
 import Button from "./Atoms/Button";
+import Parcel from "../res/parcel.types";
 
 const RateCalculator = () => {
-  const [optimalParcel, setOptimalParcel] = useState({});
+  const [optimalParcel, setOptimalParcel] = useState<Parcel[]>([]);
+
   const [userInput, setUserInput] = useState({
     width: 10,
     length: 10,

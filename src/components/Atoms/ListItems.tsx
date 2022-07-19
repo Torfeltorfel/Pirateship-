@@ -4,13 +4,13 @@ import Parcel from "../../res/parcel.types";
 import Title from "./Title";
 
 interface ListItemsProps {
-  optimalParcel: any;
+  optimalParcel: Parcel[];
   children: React.ReactNode;
 }
 
 const ListItems: FC<ListItemsProps> = ({ optimalParcel, children }) => {
   console.log(typeof optimalParcel);
-  optimalParcel.sort((a: any, b: any) => {
+  optimalParcel.sort((a, b) => {
     return a.price - b.price;
   });
   return (
