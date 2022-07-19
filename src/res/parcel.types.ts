@@ -7,7 +7,6 @@ type Parcel = {
     length: number;
     weight: number;
     width: number;
-    "insured value": string;
   };
 };
 
