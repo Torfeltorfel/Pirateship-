@@ -36,6 +36,27 @@ Imagine Pirate Ship wants to expand to the German market. In that case we'd need
 - DHL Pricing Päckchen: https://www.dhl.de/de/privatkunden/pakete-versenden/deutschlandweit-versenden/paeckchen.html
 - Existing Pirate Ship Rates Calculator for shipping from US for inspiration: https://www.pirateship.com/rates
 
-**Answer**
+**ANSWERS**
 
 - Accessability: I used these guidelines http://web-accessibility.carnegiemuseums.org/code/forms/ & https://webaim.org/techniques/forms/advanced & https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label to fullfill the accessability criterias. However, some of the guidelines are conflicting that's why I decided either for the one or the other
+
+_PROVIDE IDEAS THAT IMPROVE THE UX_
+
+- The goal of a great UX should be that the user can get the result as fast as possible and with as little effort as needed.
+- Problem of current UX: user has to type in the measurements of the parcel. In other words, the user has to leave the mouse and type in 4 different measures (weight, length, height, width) with each ~2-3 numbers
+- Alternative solution: instead of typing in values in input fields the user should rather select from different radio buttons
+  -- first radiobutton: weight - user can choose between 5 different weights of his parcel. This already filters out all non-fitting parcel with just one click
+  -- second radiobutton, with parcel images: the user should then see the variety of different parcels and their measurements & pricing information. The user can click on them. By doing so, the user selects the dedicated parcel.
+  -- third submit button: user clicks on submit button and approves the selection
+
+_Form Validation_
+
+- I already applied certain html input field properties, which validated the users input, such as min, max, type=number. Yet, this doesn't prevent the user for instance to type in an "e", as the numeric input field allows to enter e-functions.
+- To prevent additional faulty inputs and to give direct user feedback, we could add a check in the handleChange function. There, we could for instance apply a Regex, which checks the value. The check could then give straight feedback to the user. However, implementing this logic requires to make sure that the error is displayed at the correct input field. This adds additional logic.
+- Above all, many form packages, such as React-Hook-Form, offer error handling out of the box.
+
+_Responsive Design_
+
+- The application is already very lightweighted. I only added a flex-wrap to the results, so that they are wrapped accordingly to the device screen
+
+**Remaining Tasks**
