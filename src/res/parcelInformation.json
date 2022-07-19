@@ -6,10 +6,11 @@
       "height": 35,
       "width": 25,
       "length": 10,
-      "weight": 2,
-      "insured value": ""
+      "weight": 2
     },
-    "price": 3.99
+    "price": 3.99,
+    "tracking": "🚫",
+    "insurance": "🚫"
   },
   {
     "value": "paekchenM",
@@ -18,10 +19,11 @@
       "height": 60,
       "width": 30,
       "length": 15,
-      "weight": 2,
-      "insured value": ""
+      "weight": 2
     },
-    "price": 4.79
+    "price": 4.79,
+    "tracking": "🚫",
+    "insurance": "🚫"
   },
 
   {
@@ -31,10 +33,11 @@
       "height": 60,
       "width": 30,
       "length": 15,
-      "weight": 2,
-      "insured value": ""
+      "weight": 2
     },
-    "price": 5.49
+    "price": 5.49,
+    "tracking": "✔️",
+    "insurance": "bis 500€"
   },
   {
     "value": "packet5kg",
@@ -43,10 +46,11 @@
       "height": 120,
       "width": 60,
       "length": 60,
-      "weight": 5,
-      "insured value": ""
+      "weight": 5
     },
-    "price": 6.99
+    "price": 6.99,
+    "tracking": "✔️",
+    "insurance": "bis 500€"
   },
   {
     "value": "packet10kg",
@@ -55,10 +59,11 @@
       "height": 120,
       "width": 60,
       "length": 60,
-      "weight": 10,
-      "insured value": ""
+      "weight": 10
     },
-    "price": 9.49
+    "price": 9.49,
+    "tracking": "✔️",
+    "insurance": "bis 500€"
   },
   {
     "value": "packet31kg",
@@ -67,9 +72,10 @@
       "height": 120,
       "width": 60,
       "length": 60,
-      "weight": 31.5,
-      "insured value": ""
+      "weight": 31.5
     },
-    "price": 16.99
+    "price": 16.99,
+    "tracking": "✔️",
+    "insurance": "bis 500€"
   }
 ]

@@ -13,6 +13,8 @@ const parcelRestrictions: Parcel[] = [
       weight: 2,
     },
     price: 3.99,
+    tracking: "🚫",
+    insurance: "🚫",
   },
   {
     value: "paekchenM",
@@ -24,6 +26,8 @@ const parcelRestrictions: Parcel[] = [
       weight: 2,
     },
     price: 4.79,
+    tracking: "🚫",
+    insurance: "🚫",
   },
 
   {
@@ -36,6 +40,8 @@ const parcelRestrictions: Parcel[] = [
       weight: 2,
     },
     price: 5.49,
+    tracking: "✔️",
+    insurance: "bis 500€",
   },
   {
     value: "packet5kg",
@@ -47,6 +53,8 @@ const parcelRestrictions: Parcel[] = [
       weight: 5,
     },
     price: 6.99,
+    tracking: "✔️",
+    insurance: "bis 500€",
   },
   {
     value: "packet10kg",
@@ -58,6 +66,8 @@ const parcelRestrictions: Parcel[] = [
       weight: 10,
     },
     price: 9.49,
+    tracking: "✔️",
+    insurance: "bis 500€",
   },
   {
     value: "packet31kg",
@@ -69,6 +79,8 @@ const parcelRestrictions: Parcel[] = [
       weight: 31.5,
     },
     price: 16.99,
+    tracking: "✔️",
+    insurance: "bis 500€",
   },
 ];
 
@@ -86,6 +98,8 @@ test("finds optimalParcels", () => {
         weight: 31.5,
       },
       price: 16.99,
+      tracking: "✔️",
+      insurance: "bis 500€",
     },
   ]);
 });

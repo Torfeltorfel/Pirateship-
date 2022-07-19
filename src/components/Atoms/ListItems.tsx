@@ -26,6 +26,8 @@ const ListItems: FC<ListItemsProps> = ({ optimalParcel, children }) => {
             <li>Max Height: {parcel.restrictions.height}cm</li>
             <li>Max Length: {parcel.restrictions.length}cm</li>
             <li>Max Weight: {parcel.restrictions.weight}kg</li>
+            <li>Tracking: {parcel.tracking}</li>
+            <li>Insurance: {parcel.insurance}</li>
           </ol>
         ))}
       </div>
