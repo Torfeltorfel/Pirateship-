@@ -1,39 +1,70 @@
-# DHL Domestic Rate Calculator MVP
+# Getting Started with Create React App
 
-Please note down the time you're working on this task. 
-We think you shouldn't need to work for more than ~1 day on it. If you think that's not enough, please get in touch with us and we'll discuss whether we can skip some of the acceptance criteria.
-It's OK if not everything is perfect, we can discuss those things in our meeting.
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Available Scripts
 
-**Background**
+In the project directory, you can run:
 
-Imagine Pirate Ship wants to expand to the German market. In that case we'd need to implement a public rate calculator, that offers our potential German users a means to rate their packages and compare options.
+### `npm start`
 
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-**Acceptance Criteria**
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
 
-* Users are able to rate the following services: `DHL Paket 2 kg`, `DHL Paket 5 kg`, `DHL Paket 10 kg`, `DHL Paket 31,5 kg`, `Päckchen S`, `Päckchen M`
-* Only domestic rates (shipping from Germany to Germany) are presented, no international options needed as of now
-* Users can enter Weight and Dimensions
-* Based on Weight and Dimensions, available services should be shown including a price in Euro
-* Relevant restrictions and limits are shown (dimensions, weight, insured value, ...)
-* Rates are displayed in Euro
-* Weights are entered in KG
-* Dimensions are entered in CM
+### `npm test`
 
-**Technical Details**
-* Your code should be committed to this git repository.
-* You may choose the technology stack freely, including programming language, frameworks (if any), libraries, etc.
-* The frontend must be HTML. It does not need to follow the most bleeding edge design trends, but should show your understanding of CSS.
-* You can choose how to implement the requirements technically. The following extra points are for inspiration only, **but not compulsory**. **The main objective is to fulfil the Acceptance Criteria.**  
-  * Provide ideas or features that improve UX ("What is the best option to ship my package? What is the cheapest option to ship my package? What is the easiest UX we can think of?") that go beyond the MVP acceptance criteria (either implemented or presented as ideas) 
-  * Create form validation that prevents the user from entering senseless inputs. 
-  * Create responsive design for mobile layouts, and accessible design for users that require it. 
-  * Create a testing strategy, including manual and/or automated tests.* It's fine if the requirements are not completed fully. However, we would like you to be able to talk about all of them.
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
+### `npm run build`
 
-**References**
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-* DHL Pricing Paket: https://www.dhl.de/de/privatkunden/pakete-versenden/deutschlandweit-versenden/paket.html
-* DHL Pricing Päckchen: https://www.dhl.de/de/privatkunden/pakete-versenden/deutschlandweit-versenden/paeckchen.html
-* Existing Pirate Ship Rates Calculator for shipping from US for inspiration: https://www.pirateship.com/rates
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
+
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+
+### `npm run eject`
+
+**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+
+If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+
+You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+
+## Learn More
+
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+
+To learn React, check out the [React documentation](https://reactjs.org/).
+
+### Code Splitting
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+
+### Analyzing the Bundle Size
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+
+### Making a Progressive Web App
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+
+### Advanced Configuration
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+
+### Deployment
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+
+### `npm run build` fails to minify
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

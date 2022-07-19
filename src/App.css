@@ -1,0 +1,40 @@
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.button {
+  width: 12rem;
+  padding: 0.5rem;
+  background-color: #748da6;
+  color: #fff;
+  color: rgb(241 245 249 248);
+  text-transform: uppercase;
+  font-weight: 700;
+}
+.button:hover {
+  background-color: #9cb4cc;
+}
+
+.rateCalculator {
+  display: flex;
+  flex-direction: column;
+}
+
+.inputForm {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  margin-bottom: 4rem;
+  max-width: 14rem;
+  padding: 1rem;
+  border: 1px solid #f2d7d9;
+  background-color: #fff;
+}
