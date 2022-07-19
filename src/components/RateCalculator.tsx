@@ -9,7 +9,7 @@ import Parcel from "../res/parcel.types";
 
 const RateCalculator = () => {
   const [optimalParcel, setOptimalParcel] = useState<Parcel[]>([]);
-
+  const [error, setError] = useState("");
   const [userInput, setUserInput] = useState({
     width: 10,
     length: 10,
@@ -21,13 +21,23 @@ const RateCalculator = () => {
     setOptimalParcel(findOptimalParcel(userInput, parcelInformation));
   };
   const handleChange =
-    (unit: string) => (event: React.ChangeEvent<HTMLInputElement>) =>
-      setUserInput({ ...userInput, [unit]: +event.target.value });
+    (unit: string) => (event: React.ChangeEvent<HTMLInputElement>) => {
+      //This is a very very basic validation, in which errors don't persist if another input field is handled
+      //To make sure that the error persist, ideally next to the field, the fields require states to which the error could be passed. I left this out due to time restrictions
+      const pattern = /[^a-z]/gi;
+      if (pattern.test(event.target.value)) {
+        setUserInput({ ...userInput, [unit]: +event.target.value });
+        setError("");
+      } else {
+        setError("Input Value not correct");
+      }
+    };
 
   return (
     <div className="rateCalculator">
       <div className="inputForm">
         <Title headingLevel="h1">get your parcel</Title>
+        <p className="text-xs text-center text-rose-600">{error}</p>
         <form className="flex flex-col gap-3" onSubmit={handleSubmit}>
           <InputField
             placeholder="e.g. 17cm"
