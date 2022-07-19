@@ -1,4 +1,6 @@
 import React, { FC } from "react";
+import { IndexKind } from "typescript";
+import Parcel from "../../res/parcel.types";
 import Title from "./Title";
 
 interface ListItemsProps {
@@ -7,6 +9,7 @@ interface ListItemsProps {
 }
 
 const ListItems: FC<ListItemsProps> = ({ optimalParcel, children }) => {
+  console.log(typeof optimalParcel);
   optimalParcel.sort((a: any, b: any) => {
     return a.price - b.price;
   });
@@ -14,7 +17,7 @@ const ListItems: FC<ListItemsProps> = ({ optimalParcel, children }) => {
     <div className="text-center bg-white p-4">
       <Title headingLevel={"h2"}>{children}</Title>
       <div className="flex flex-wrap p-4 text-start ">
-        {optimalParcel.map((parcel: any, index: any) => (
+        {optimalParcel.map((parcel: Parcel, index: IndexKind) => (
           <ol key={parcel.name} className="p-4">
             <li className="font-semibold">Choice: {index + 1}</li>
             <li>Name: {parcel.name}</li>
