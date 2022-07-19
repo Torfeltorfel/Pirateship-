@@ -18,6 +18,9 @@ const RateCalculator = () => {
     event.preventDefault();
     setOptimalParcel(findOptimalParcel(userInput, parcelInformation));
   };
+  const handleChange =
+    (unit: string) => (event: React.ChangeEvent<HTMLInputElement>) =>
+      setUserInput({ ...userInput, [unit]: +event.target.value });
 
   return (
     <div className="rateCalculator">
@@ -30,9 +33,7 @@ const RateCalculator = () => {
             id="height"
             name="Height"
             maxValue={120}
-            onChange={(event: any) =>
-              setUserInput({ ...userInput, height: event.target.value })
-            }
+            onChange={handleChange("height")}
           />
           <InputField
             placeholder="e.g. 23cm"
@@ -40,9 +41,7 @@ const RateCalculator = () => {
             id="width"
             name="Width"
             maxValue={60}
-            onChange={(event: any) =>
-              setUserInput({ ...userInput, width: event.target.value })
-            }
+            onChange={handleChange("width")}
           />
           <InputField
             placeholder="e.g. 20cm"
@@ -50,9 +49,7 @@ const RateCalculator = () => {
             id="length"
             name="Length"
             maxValue={60}
-            onChange={(event: any) =>
-              setUserInput({ ...userInput, length: event.target.value })
-            }
+            onChange={handleChange("length")}
           />
 
           <InputField
@@ -62,9 +59,7 @@ const RateCalculator = () => {
             name="Weight"
             step={0.5}
             maxValue={31.5}
-            onChange={(event: any) =>
-              setUserInput({ ...userInput, weight: event.target.value })
-            }
+            onChange={handleChange("weight")}
           />
           <Button>get best parcel</Button>
         </form>
