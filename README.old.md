@@ -28,7 +28,9 @@ Imagine Pirate Ship wants to expand to the German market. In that case we'd need
   - Provide ideas or features that improve UX ("What is the best option to ship my package? What is the cheapest option to ship my package? What is the easiest UX we can think of?") that go beyond the MVP acceptance criteria (either implemented or presented as ideas)
   - Create form validation that prevents the user from entering senseless inputs.
   - Create responsive design for mobile layouts, and accessible design for users that require it.
-  - Create a testing strategy, including manual and/or automated tests.\* It's fine if the requirements are not completed fully. However, we would like you to be able to talk about all of them.
+  - Create a testing strategy, including manual and/or automated tests.
+
+It's fine if the requirements are not completed fully. However, we would like you to be able to talk about all of them.
 
 **References**
 
@@ -49,6 +51,8 @@ _PROVIDE IDEAS THAT IMPROVE THE UX_
   -- second radiobutton, with parcel images: the user should then see the variety of different parcels and their measurements & pricing information. The user can click on them. By doing so, the user selects the dedicated parcel.
   -- third submit button: user clicks on submit button and approves the selection
 
+- Additionally, someone can think of highlighting different parcel services and/or allowing to filter for services like "tracking" or "insurance"
+
 _Form Validation_
 
 - I already applied certain html input field properties, which validated the users input, such as min, max, type=number. Yet, this doesn't prevent the user for instance to type in an "e", as the numeric input field allows to enter e-functions.
@@ -57,6 +61,27 @@ _Form Validation_
 
 _Responsive Design_
 
-- The application is already very lightweighted. I only added a flex-wrap to the results, so that they are wrapped accordingly to the device screen
+- The application is already very lightweighted & easily usable on mobile screens. I only added a flex-wrap to the results, so that they are wrapped accordingly to the device screen. Hence, there was no need for me to add media-queries.
 
-**Remaining Tasks**
+**Testing Strategy**
+
+A proper testing strategy contains various testing methods and process.
+
+_Unit Tests_
+
+- Tools, such as Jest allow to write test and see, if the dedicated component or function works as expected.
+- Such test should run automatically, before pushing the code so that there is enough time to check if new code breaks old code
+
+_End to End Tests_
+
+- Modern web application often use tools & packages, which interact with the code. Hence, unit & integration test might not cover all scenarios.
+- Yet, it is important to actually to mock the full user-experience
+
+_Bug tracking_
+
+- but what happens, if units tests have not been written properly and end-to-end test don't reveal certain bugs? That's why it is still important track bugs and ideally create a channel, which informs relevant stackholders.
+
+_Other_
+
+- Environments: Needless to say and important for End to End tests: have different enviornment such as Dev, Staging & Production to test the feature on different levels allow to trace bugs before they are released in the nature
+- Typescript: Using typescript add another layer of security, as it allows to avoid common errors such as undefined or type errors
