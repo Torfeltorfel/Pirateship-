@@ -1,13 +1,13 @@
 // const findOptimalParcel = import("./findOptimalParcel");
 import Parcel from "../res/parcel.types";
-import { findOptimalParcel } from "./findOptimalParcel";
+import { findOptimalParcels } from "./findOptimalParcel";
 import parcelinformation from "../res/parcelInformation.json";
 
 const parcelRestrictions: Parcel[] = parcelinformation;
 const userInput = { width: 10, length: 10, height: 10, weight: 30 };
 
-test("finds optimalParcels", () => {
-  expect(findOptimalParcel(userInput, parcelRestrictions)).toEqual([
+test("Should find optimal parcel", () => {
+  expect(findOptimalParcels(userInput, parcelRestrictions)).toEqual([
     {
       value: "packet31kg",
       name: "Packet 31,5kg",
