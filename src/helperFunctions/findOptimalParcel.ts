@@ -1,6 +1,6 @@
 import Parcel from "../res/parcel.types";
 
-export const findOptimalParcel = (
+export const findOptimalParcels = (
   userParcel: { width: number; length: number; height: number; weight: number },
   parcelInformation: Parcel[]
 ) => {
