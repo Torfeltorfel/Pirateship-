@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { InputField } from "./Atoms/InputField";
 import parcelInformation from "../res/parcelInformation.json";
-import { findOptimalParcel } from "../helperFunctions/findOptimalParcel";
-import Title from "./Atoms/Title";
+import { findOptimalParcels } from "../helperFunctions/findOptimalParcel";
+import Title, { titleSizes } from "./Atoms/Title";
 import ListItems from "./Atoms/ListItems";
 import Button from "./Atoms/Button";
 import Parcel from "../res/parcel.types";
@@ -18,13 +18,13 @@ const RateCalculator = () => {
   });
   const handleSubmit = (event: React.SyntheticEvent) => {
     event.preventDefault();
-    setOptimalParcel(findOptimalParcel(userInput, parcelInformation));
+    setOptimalParcel(findOptimalParcels(userInput, parcelInformation));
   };
   const handleChange =
     (unit: string) => (event: React.ChangeEvent<HTMLInputElement>) => {
       //This is a very very basic validation, in which errors don't persist if another input field is handled
       //To make sure that the error persist, ideally next to the field, the fields require states to which the error could be passed. I left this out due to time restrictions
-      const pattern = /[^a-z]/gi;
+      const pattern = /\d{1,}/gi;
       if (pattern.test(event.target.value)) {
         setUserInput({ ...userInput, [unit]: +event.target.value });
         setError("");
@@ -36,7 +36,7 @@ const RateCalculator = () => {
   return (
     <div className="rateCalculator">
       <div className="inputForm">
-        <Title headingLevel="h1">get your parcel</Title>
+        <Title headingLevel={titleSizes.h1}>get your parcel</Title>
         <p className="text-xs text-center text-rose-600">{error}</p>
         <form className="flex flex-col gap-3" onSubmit={handleSubmit}>
           <InputField
@@ -77,7 +77,7 @@ const RateCalculator = () => {
         </form>
       </div>
       {Object.keys(optimalParcel).length > 0 && (
-        <ListItems optimalParcel={optimalParcel}>your best choice</ListItems>
+        <ListItems optimalParcels={optimalParcel}>your best choice</ListItems>
       )}
     </div>
   );

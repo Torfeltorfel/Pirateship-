@@ -1,12 +1,12 @@
 import React, { FC } from "react";
 
-enum titleSizes {
+export enum titleSizes {
   h1 = "h1",
-  h2 = "h2 ",
+  h2 = "h2",
 }
 
 interface TitleProps {
-  headingLevel: keyof typeof titleSizes;
+  headingLevel: titleSizes;
   children: React.ReactNode;
 }
 
